@@ -1,0 +1,187 @@
+/* Загальний стиль */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #f0f4f7; /* Легкий фон */
+    color: #333;
+    font-size: 1.2em; /* Збільшення основного шрифту */
+}
+
+/* Шапка сайту */
+header.hero-section {
+    background: linear-gradient(to right, #ff7e5f, #feb47b); /* Градієнт від рожевого до жовтого */
+    color: white;
+    text-align: center;
+    padding: 60px 20px;
+}
+
+header h1 {
+    font-size: 3.5em; /* Збільшення розміру заголовка */
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Навігація */
+.navigation .nav-link {
+    margin: 0 20px;
+    font-size: 1.5em; /* Збільшення шрифту навігаційних посилань */
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+.navigation .nav-link:hover {
+    color: #ff7e5f; /* Підсвічування на наведенні */
+}
+
+/* Основні секції */
+section {
+    padding: 50px 10%;
+    margin: 20px auto;
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border: 1px solid #eee;
+    opacity: 0;
+    transform: translateY(50px);
+    animation: slideIn 1s ease-in-out forwards;
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+section h2 {
+    font-size: 2.5em; /* Збільшення розміру заголовків секцій */
+    color: #ff7e5f; /* Рожевий колір для заголовків */
+    font-weight: bold;
+}
+
+section h3 {
+    font-size: 2em; /* Збільшення шрифту підзаголовків */
+    color: #2e3a59; /* Темно-синій для підзаголовків */
+    margin-top: 20px;
+}
+
+section p {
+    font-size: 1.3em; /* Збільшення шрифту для тексту */
+    line-height: 1.6;
+    color: #555; /* Трохи темніший для кращої читабельності */
+}
+
+section img.responsive-img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 20px auto;
+    border-radius: 10px;
+    border: 5px solid #ff7e5f; /* Рамка навколо зображень */
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
+}
+
+section img.responsive-img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Таблиці */
+table {
+    width: 100%;
+    margin: 20px 0;
+    border-collapse: collapse;
+}
+
+table th, table td {
+    padding: 15px; /* Збільшення відступів у таблиці */
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+table th {
+    background: #ff7e5f; /* Рожевий фон для заголовків таблиць */
+    color: white;
+}
+
+table td {
+    background: #f7f7f7;
+}
+
+table tr:hover {
+    background-color: #f1f1f1; /* Легкий сірий колір при наведенні на рядки */
+}
+
+/* Футер */
+footer {
+    background: #2e3a59; /* Темно-синій для футера */
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    font-size: 1.3em; /* Збільшення шрифту у футері */
+}
+
+footer p {
+    margin: 0;
+}
+
+/* Кнопки */
+button {
+    background-color: #feb47b; /* Жовтий фон кнопок */
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    font-size: 1.4em; /* Збільшення шрифту на кнопках */
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    animation: bounce 0.4s;
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-5px);
+    }
+}
+
+/* Анімація для шапки */
+@keyframes slideInFromBottom {
+    from {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Застосувати анімацію до шапки */
+header.hero-section {
+    animation: slideInFromBottom 1s ease-out;
+}
